@@ -1,2 +1,12 @@
+from kavenegar import *
+
 def send_otp_code(phone_number, code):
-    pass
+    try :
+        api = KavenegarAPI('api key')
+        params = { 'sender' : '2000660110', 'receptor': phone_number, 'message' :f' {code}کد تایید شما ' }
+        response = api.sms_send(params)
+        print(response)
+    except APIException as e: 
+        print(e)
+    except HTTPException as e:
+        print(e)
