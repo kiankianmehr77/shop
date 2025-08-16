@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+{% load static %}
+{% block home_header %}
+<link rel="stylesheet" href='{% static "home/css/style.css" %}'>
+
+{% endblock%}
 {% block content %}
     <h3> Hello from Kian </h3>
 
